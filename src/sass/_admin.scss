@@ -1,0 +1,105 @@
+.wrap-admin-center-block {
+	display          : flex;
+	align-items      : flex-start;
+	justify-content  : center;
+	padding          : 15px;
+	background-color : $base-bg;
+	height           : calc(100vh - 72px); //72px it is height for header block
+
+	@include break(horizontal) {
+		height     : 100%;
+		min-height : 100%;
+	}
+}
+
+.admin-center-block {
+	position         : relative;
+	max-width        : 1110px;
+	width            : 100%;
+	height           : 680px;
+	background-color : $white;
+	box-shadow       : 0 2px 30px rgba(0, 0, 0, 0.1);
+	border-radius    : 10px;
+	display          : flex;
+	justify-content  : center;
+	margin-top       : 30px;
+	padding          : 25px 0;
+
+	&__inner {
+		text-align : center;
+		width      : 100%;
+	}
+
+	@include break(small) {
+		height         : calc(100vh - 102px);
+		padding-bottom : 60px;
+		margin-top     : 0;
+	}
+	@include break(horizontal) {
+		height     : auto;
+		min-height : calc(100vh - 102px);
+	}
+
+}
+
+.admin-menu {
+	display         : flex;
+	justify-content : center;
+	border-bottom   : 2px solid $hr-border;
+	margin-top      : 20px;
+	flex-wrap       : wrap;
+
+	@include break(small) {
+		margin-top : 0;
+	}
+
+	&__item {
+		font-size      : 18px;
+		line-height    : 24px;
+		margin         : 0 15px;
+		cursor         : pointer;
+		padding-bottom : 15px;
+		position       : relative;
+		font-family: $font-family-base;
+
+		@include break(small) {
+			margin-top     : 10px;
+			padding-bottom : 5px;
+		}
+
+		&:after {
+			content    : "";
+			position   : absolute;
+			bottom     : -2px;
+			left       : 0;
+			right      : 0;
+			height     : 2px;
+			width      : 0;
+			background : linear-gradient(90deg, $orange 0%, $orange-light 100%);
+			transition : width $speed-high;
+			margin     : auto;
+		}
+
+		&.active {
+			font-weight : bold;
+		}
+
+		&.active, &:hover {
+			&:after {
+				width : 100%;
+			}
+		}
+	}
+}
+
+.step-back{
+	width: 14px;
+	height: 22px;
+	display: block;
+	position: absolute;
+	left: 22px;
+	top: 31px;
+	cursor:pointer;
+	background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxNCAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMC41MDM3MDIgOS45MTA4OUwxMS4wNjQgMC40NTE1M0MxMS43MzU4IC0wLjE1MDUxMSAxMi44MjQ5IC0wLjE1MDUxMSAxMy40OTY0IDAuNDUxNTNDMTQuMTY3OSAxLjA1MzAzIDE0LjE2NzkgMi4wMjg2MiAxMy40OTY0IDIuNjMwMDdMNC4xNTIxMiAxMS4wMDAyTDEzLjQ5NjEgMTkuMzdDMTQuMTY3NiAxOS45NzE3IDE0LjE2NzYgMjAuOTQ3MiAxMy40OTYxIDIxLjU0ODdDMTIuODI0NiAyMi4xNTA0IDExLjczNTUgMjIuMTUwNCAxMS4wNjM4IDIxLjU0ODdMMC41MDM0MyAxMi4wODkyQzAuMTY3Njg0IDExLjc4ODMgOS4yNzE3NmUtMDcgMTEuMzk0MyA5LjYxNjMyZS0wNyAxMS4wMDAyQzkuOTYxMDZlLTA3IDEwLjYwNTkgMC4xNjgwMTEgMTAuMjExNiAwLjUwMzcwMiA5LjkxMDg5WiIgZmlsbD0iIzMxMDk4NSIvPjwvc3ZnPg==)
+center no-repeat;
+}

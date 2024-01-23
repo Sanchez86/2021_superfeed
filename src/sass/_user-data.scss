@@ -1,0 +1,142 @@
+.user-data{
+	max-width: 1100px;
+	width: 100%;
+	margin: auto;
+	background-image: url("../images/bg-user-data.png");
+	min-height: 380px;
+	border-radius: 14px;
+	text-align: center;
+	padding: 50px 70px 30px 70px;
+	position: relative;
+	@include break(small){
+		min-height: auto;
+		padding: 50px 15px 30px 15px;
+	}
+	&__avatar{
+		width: 90px;
+		height: 90px;
+		margin: 20px auto;
+		position: relative;
+		z-index: 0;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border: 2px solid $img-border;
+			border-radius: 100%;
+			position: relative;
+			z-index: 0;
+		}
+	}
+	&__download{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 24px;
+		height: 24px;
+		border-radius: 100%;
+		background: linear-gradient(79.72deg, $purple 0%, $purple-light 100%);
+		box-shadow: 0 0 10px rgba(30, 4, 84, 0.3);
+		cursor: pointer;
+		z-index: 1000;
+
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: 7px;
+			right: 5px;
+			width: 12px;
+			height: 10px;
+			background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNS45OTkyMiA0LjM2NjIxQzQuNTE4MzUgNC4zNjYyMSAzLjMxODM2IDUuNTY2MiAzLjMxODM2IDcuMDQ3MDZDMy4zMTgzNiA4LjUyNzkyIDQuNTE4MzUgOS43Mjc5MiA1Ljk5OTIyIDkuNzI3OTJDNy40ODAwOCA5LjcyNzkyIDguNjgwMDcgOC41Mjc5MiA4LjY4MDA3IDcuMDQ3MDZDOC42ODAwNyA1LjU2NjIgNy40ODAwOCA0LjM2NjIxIDUuOTk5MjIgNC4zNjYyMVpNNS45OTkyMiA4LjczMjE3QzUuMDgwMDYgOC43MzIxNyA0LjMxNDExIDcuOTY2MjEgNC4zMTQxMSA3LjA0NzA2QzQuMzE0MTEgNi4xMjc5MSA1LjA4MDA2IDUuMzYxOTYgNS45OTkyMiA1LjM2MTk2QzYuOTE4MzcgNS4zNjE5NiA3LjY4NDMyIDYuMTI3OTEgNy42ODQzMiA3LjA0NzA2QzcuNjg0MzIgNy45NjYyMSA2LjkxODM3IDguNzMyMTcgNS45OTkyMiA4LjczMjE3WiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMTAuMTg3MiAyLjQyNTdIOS4wMzgzTDkuMDEyNzYgMi4xNzAzN0M4Ljg4NTExIDEuMjc2NzYgOC4wNDI1NiAwLjU4NzQwMiA3LjA0NjgxIDAuNTg3NDAySDUuMjg1MTFDNC4yODkzNiAwLjU4NzQwMiAzLjQ0NjgxIDEuMjc2NzYgMy4zMTkxNiAyLjE3MDM3TDMuMjkzNjIgMi40MjU3SDIuNDUxMDdWMi4xNzA0QzIuNDUxMDcgMS44ODk1NSAyLjIyMTI4IDEuNjU5NzcgMS45NDA0MyAxLjY1OTc3QzEuNjU5NTkgMS42NTk3NyAxLjQyOTggMS44ODk1NSAxLjQyOTggMi4xNzA0VjIuNDUxMjRDMC42MTI3NjYgMi42MDQ0MyAwIDMuMjY4MjggMCA0LjA4NTI5VjkuNzUzMzhDMCAxMC42NzI1IDAuODE3MDE0IDExLjQxMjkgMS44MTI3NiAxMS40MTI5SDEwLjE4NzJDMTEuMTgzIDExLjQxMjkgMTIgMTAuNjcyNSAxMiA5Ljc1MzM4VjQuMDg1MjlDMTIgMy4xNjYxNCAxMS4xODMgMi40MjU3IDEwLjE4NzIgMi40MjU3Wk0xMC4xODcyIDEwLjQxNzJIMS44MTI3OEMxLjM1MzIxIDEwLjQxNzIgMC45OTU3NjkgMTAuMTEwOCAwLjk5NTc2OSA5Ljc1MzM4VjQuMDg1MjlDMC45OTU3NjkgMy43MDIzMSAxLjM1MzIxIDMuNDIxNDcgMS44MTI3OCAzLjQyMTQ3SDMuNzI3NjhDMy45NTc0NyAzLjQyMTQ3IDQuMTg3MjUgMy4yNDI3NCA0LjIxMjc5IDIuOTg3NDRMNC4zMTQ5MyAyLjI5ODA3QzQuMzY1OTggMS44ODk1NSA0Ljc3NDUgMS41ODMxNyA1LjI4NTEzIDEuNTgzMTdINy4wNDY4NEM3LjUzMTk1IDEuNTgzMTcgNy45NjU5OSAxLjg4OTU1IDguMDE3MDQgMi4yOTgwN0w4LjExOTE4IDIuOTg3NDRDOC4xNDQ3MiAzLjI0Mjc2IDguMzQ4OTcgMy40MjE0NyA4LjYwNDI5IDMuNDIxNDdIMTAuMTg3MkMxMC42NDY4IDMuNDIxNDcgMTEuMDA0MyAzLjcyNzg1IDExLjAwNDMgNC4wODUyOVY5Ljc1MzM4QzExLjAwNDMgMTAuMTM2NCAxMC42NDY4IDEwLjQxNzIgMTAuMTg3MiAxMC40MTcyWiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNOS42NzU5NiA0LjA4NTQ1SDkuNDQ2MThDOS4xNjUzMyA0LjA4NTQ1IDguOTM1NTUgNC4zMTUyNCA4LjkzNTU1IDQuNTk2MDhDOC45MzU1NSA0Ljg3NjkyIDkuMTY1MzMgNS4xMDY3MSA5LjQ0NjE4IDUuMTA2NzFIOS42NzU5NkM5Ljk1NjgxIDUuMTA2NzEgMTAuMTg2NiA0Ljg3NjkyIDEwLjE4NjYgNC41OTYwOEMxMC4xODY2IDQuMzE1MjQgOS45NTY4MSA0LjA4NTQ1IDkuNjc1OTYgNC4wODU0NVoiIGZpbGw9IndoaXRlIi8+PC9zdmc+) center center no-repeat;
+			cursor: pointer;
+		}
+	}
+	&__name{
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+		color: $white;
+	}
+	&__company{
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 21px;
+		color: $white;
+		margin-bottom: 10px;
+	}
+	&__email{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 21px;
+		color: $white;
+		margin-bottom: 30px;
+	}
+	.back-close{
+		cursor: pointer;
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		width: 14px;
+		height: 24px;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAxNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMC41MDM3MDIgMTAuODExOUwxMS4wNjQgMC40OTI1NzhDMTEuNzM1OCAtMC4xNjQxOTQgMTIuODI0OSAtMC4xNjQxOTQgMTMuNDk2NCAwLjQ5MjU3OEMxNC4xNjc5IDEuMTQ4NzYgMTQuMTY3OSAyLjIxMzA0IDEzLjQ5NjQgMi44NjkxN0w0LjE1MjEyIDEyLjAwMDJMMTMuNDk2MSAyMS4xMzA5QzE0LjE2NzYgMjEuNzg3MyAxNC4xNjc2IDIyLjg1MTUgMTMuNDk2MSAyMy41MDc3QzEyLjgyNDYgMjQuMTY0MSAxMS43MzU1IDI0LjE2NDEgMTEuMDYzOCAyMy41MDc3TDAuNTAzNDMgMTMuMTg4MkMwLjE2NzY4NSAxMi44NTk5IDkuNTgyM2UtMDcgMTIuNDMwMiA5LjkzODRlLTA3IDEyLjAwMDJDMS4wMjk0N2UtMDYgMTEuNTcgMC4xNjgwMTEgMTEuMTQgMC41MDM3MDIgMTAuODExOVoiIGZpbGw9IiM5NTlGQkQiLz48L3N2Zz4=);
+	}
+
+	.edit-profile {
+		color: $white;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 140%;
+		cursor: pointer;
+		display: inline-block;
+		padding-left: 20px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		min-height: 12px;
+		background-position: left;
+		background-repeat: no-repeat;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMS4yIDguMjc5NzlMMCAxMS45OTk4TDMuNzIgMTAuNzk5OEwxLjIgOC4yNzk3OVoiIGZpbGw9IndoaXRlIi8+PHBhdGggZD0iTTcuODk3NzEgMS41NjMyM0wyLjA0Mjk3IDcuNDE3OTdMNC41ODg1MSA5Ljk2MzUxTDEwLjQ0MzMgNC4xMDg3N0w3Ljg5NzcxIDEuNTYzMjNaIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik0xMS44MTk4IDEuODZMMTAuMTM5OCAwLjE4QzkuODk5NzcgLTAuMDYgOS41Mzk3NyAtMC4wNiA5LjI5OTc3IDAuMThMOC43NTk3NyAwLjcyTDExLjI3OTggMy4yNEwxMS44MTk4IDIuN0MxMi4wNTk4IDIuNDYgMTIuMDU5OCAyLjEgMTEuODE5OCAxLjg2WiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=);
+	}
+}
+.hash {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	min-width: 26px;
+	min-height: 26px;
+	margin-right: 15px;
+	position: relative;
+	top: -5px;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMyIgY3k9IjEzIiByPSIxMyIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMTkuMzYzNiA5LjgxODI2SDE3LjQzMDNMMTguMDY4NiA3LjQzNzZDMTguMTU5NiA3LjA5ODQxIDE3Ljk1ODUgNi43NDkwOCAxNy42MTg3IDYuNjU4MDdDMTcuMjc4OSA2LjU2NzA3IDE2LjkyOTUgNi43Njg3NyAxNi44MzkyIDcuMTA3OTZMMTYuMTEzMSA5LjgxODI2SDExLjU5MzZMMTIuMjMxOSA3LjQzNzZDMTIuMzIyOSA3LjA5ODQxIDEyLjEyMTggNi43NDkwOCAxMS43ODIgNi42NTgwN0MxMS40NDIxIDYuNTY3NzcgMTEuMDkzNSA2Ljc2ODc3IDExLjAwMzEgNy4xMDc5NkwxMC4yNzYzIDkuODE4MjZINy45MDkwOUM3LjU1Nzc4IDkuODE4MjYgNy4yNzI3NyAxMC4xMDI3IDcuMjcyNzcgMTAuNDU0NkM3LjI3Mjc3IDEwLjgwNjYgNy41NTc3OCAxMS4wOTEgNy45MDkwOSAxMS4wOTFIOS45MzQ1OUw4LjkxMDcxIDE0LjkwOTJINi42MzYzMkM2LjI4NTEzIDE0LjkwOTIgNiAxNS4xOTM2IDYgMTUuNTQ1NUM2IDE1Ljg5NzQgNi4yODUxMyAxNi4xODE5IDYuNjM2MzIgMTYuMTgxOUg4LjU2OTY1TDcuOTMxMzUgMTguNTYyNUM3Ljg0MDM0IDE4LjkwMTcgOC4wNDE0NiAxOS4yNTEgOC4zODEyNCAxOS4zNDJDOC40MzYgMTkuMzU2NyA4LjQ5MTM1IDE5LjM2MzcgOC41NDU0MiAxOS4zNjM3QzguODI2MTIgMTkuMzYzNyA5LjA4Mzg2IDE5LjE3NjYgOS4xNTk2IDE4Ljg5MjFMOS44ODY5MyAxNi4xODE5SDE0LjQwNjNMMTMuNzY4IDE4LjU2MjVDMTMuNjc3MSAxOC45MDE3IDEzLjg3ODEgMTkuMjUxIDE0LjIxOCAxOS4zNDJDMTQuMjcyNyAxOS4zNTY3IDE0LjMyOCAxOS4zNjM3IDE0LjM4MjggMTkuMzYzN0MxNC42NjM1IDE5LjM2MzcgMTQuOTIxMSAxOS4xNzY2IDE0Ljk5NjkgMTguODkyMUwxNS43MjM2IDE2LjE4MTlIMTguMDkwOUMxOC40NDIyIDE2LjE4MTkgMTguNzI3MyAxNS44OTc0IDE4LjcyNzMgMTUuNTQ1NUMxOC43MjczIDE1LjE5MzYgMTguNDQyMiAxNC45MDkyIDE4LjA5MDkgMTQuOTA5MkgxNi4wNjU0TDE3LjA4OTIgMTEuMDkxSDE5LjM2MzZDMTkuNzE0OSAxMS4wOTEgMjAgMTAuODA2NiAyMCAxMC40NTQ2QzIwIDEwLjEwMjcgMTkuNzE0OSA5LjgxODI2IDE5LjM2MzYgOS44MTgyNlpNMTQuNzQ3NCAxNC45MDkySDEwLjIyOEwxMS4yNTE5IDExLjA5MUgxNS43NzE0TDE0Ljc0NzQgMTQuOTA5MloiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSI2IiB5MT0iMTMuOTA1IiB4Mj0iMjAiIHkyPSIxMy45MDUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjRkY1RTAyIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkZCMjAzIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+);
+}
+
+.group-tags{
+	display: flex;
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item{
+		margin-right: 30px;
+		margin-bottom: 15px;
+		display: inline-block;
+		@include break(small){
+			margin-right: 15px;
+		}
+	}
+	&__header{
+		display: inline-block;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		color: $white;
+	}
+	&__elem{
+		display: inline-block;
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 19px;
+		color: $white;
+	}
+}

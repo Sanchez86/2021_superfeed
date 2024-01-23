@@ -1,0 +1,145 @@
+.rules {
+	width      : 100%;
+	text-align : center;
+
+	.my-scroller {
+		height : 251px;
+	}
+
+	&__elem {
+		margin : 15px;
+		width: calc(33% - 30px);
+
+		@include break(small) {
+			width: 100%;
+			margin: 0 0 10px 0;
+		}
+	}
+
+
+	&__block {
+		text-align      : left;
+		display         : flex;
+		justify-content : center;
+		flex-wrap       : wrap;
+		position        : relative;
+		padding-left    : 100px;
+		padding-right   : 100px;
+
+		@include break(x-small) {
+			padding-left   : 0;
+			padding-right  : 0;
+			padding-bottom : 60px;
+			flex-direction : column;
+		}
+
+		label {
+			@include break(x-small) {
+				font-size     : 14px;
+				font-weight   : 400;
+				margin-bottom : 5px;
+			}
+		}
+
+		&:first-child {
+			border-top : 1px solid $hr-border;
+		}
+
+	}
+
+	&__inputs {
+		display  : flex;
+		position : absolute;
+		right    : 25px;
+		bottom   : 34px;
+		@include break(small){
+			right    : 10px;
+			position: static;
+			justify-content: center;
+			margin-top: 5px;
+		}
+
+		.btn-small {
+			margin-right : 10px;
+		}
+	}
+
+	input {
+		@include break(small) {
+			height: 40px;
+		}
+		@include break(x-small) {
+			width     : 100%;
+			max-width : 100%;
+			height    : 30px;
+		}
+	}
+
+	.select {
+		@include break(small) {
+			height: 40px;
+		}
+		@include break(x-small) {
+			width     : 100%;
+			max-width : 100%;
+			height    : 30px;
+		}
+	}
+}
+.rules-edit {
+	&__block {
+		padding         : 0;
+		text-align      : left;
+		display         : flex;
+		align-items     : center;
+		justify-content : space-between;
+
+		&:first-child {
+			border-top : 1px solid $hr-border;
+		}
+
+		@include break(ss-small) {
+			flex-direction : column;
+			padding         : 10px 0;
+		}
+	}
+
+	&__elem {
+		margin      : 15px;
+		display     : flex;
+		align-items : center;
+
+		@include break(small){
+			margin-bottom: 0;
+		}
+
+		span {
+			display       : inline-block;
+			font-size     : 18px;
+			margin-bottom : 10px;
+		}
+
+		@include break(small) {
+			margin-top : 0;
+
+		}
+
+		&+.rules-group{
+			padding: 0;
+		}
+	}
+
+	&__mob {
+		@include break(ss-small) {
+			display     : flex;
+			align-items : baseline;
+			margin-bottom: 10px;
+
+			span {
+				margin-bottom : 0;
+				margin-right  : 10px;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,47 @@
+.form-control {
+    text-align : left;
+    width: 100%;
+    max-width: 370px;
+    margin-left : auto;
+    margin-right : auto;
+
+    &.no-margin {
+        margin : 0;
+    }
+    &.no-max-width {
+        max-width : 100%;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height : 1.5;
+        font-weight: 500;
+		@include break(small){
+			font-size: 14px;
+			line-height : 1.3;
+		}
+    }
+
+    &__input-text {
+        border: 1px solid $btn-border;
+        border-radius: 10px;
+        width : 100%;
+        height: 46px;
+        padding: 0 20px;
+        font-size: 14px;
+        font-weight: 400;
+
+        &.error {
+            border-color: $red;
+        }
+    }
+
+	[readonly] {
+		background: none;
+		border: none;
+		pointer-events: none;
+		font-size: 18px;
+	}
+}

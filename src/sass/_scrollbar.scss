@@ -1,0 +1,31 @@
+:global(.scrollbar-track){
+	width: 8px !important;
+	box-shadow: none !important;
+	background-color: #F6F6F6 !important;
+}
+:global(.scrollbar-thumb){
+	width: 8px !important;
+	background: linear-gradient(180deg, #FF5C00 0%, #FFB703 100%);
+}
+:global(.wrap-scroll){
+	position: relative;
+	border: 1px solid $btn-border;
+	border-radius: 5px;
+	padding:  18px 23px 19px 14px;
+}
+:global(.my-scroller){
+	overflow-x: auto;
+}
+/* chrome, safari */
+:global(.my-scroller::-webkit-scrollbar) { width: 0; }
+
+/* ie 10+ */
+:global(.my-scroller) { -ms-overflow-style: none; }
+
+:global(.scrollbar-track){
+	width: 8px !important;
+	box-shadow: none !important;
+}
+:global(.scrollbar-thumb){
+	width: 8px !important;
+}

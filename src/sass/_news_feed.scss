@@ -1,0 +1,17 @@
+.news-feed-wrapper {
+	padding: 20px 60px 0;
+	background: #F8F8F8;
+	@include break(small){
+		padding: 20px 15px 0;
+	}
+}
+
+.container {
+	width: 100%;
+	max-width : 760px;
+	margin : 0 auto;
+}
+
+.feed-item-wrap{
+	box-shadow: 0 2px 20px #e8e8e8;
+}

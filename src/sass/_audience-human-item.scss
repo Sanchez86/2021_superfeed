@@ -1,0 +1,64 @@
+.audience-people{
+
+	&__item{
+		display: flex;
+		width: calc(50% - 5px);
+		height: 80px;
+		align-items: center;
+		background-color: $white;
+		border: 1px solid $btn-border;
+		border-radius: 5px;
+		padding: 15px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		position: relative;
+
+		&.active {
+			&:after {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 14px;
+				height: 14px;
+				z-index: 1;
+				background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI3IiBjeT0iNyIgcj0iNyIgZmlsbD0iI0Q3RDdENyIvPjxjaXJjbGUgY3g9IjciIGN5PSI3IiByPSI2IiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjciIGN5PSI3IiByPSI1IiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIi8+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyIiB4MT0iMiIgeTE9IjEyIiB4Mj0iMTMuNDM3NyIgeTI9IjkuOTI1MDUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMzEwOTg1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjODY1OEYyIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+) center center no-repeat;
+				right: 6px;
+				top: 6px;
+			}
+		}
+
+		&:nth-child(even){
+			margin-right: 0;
+		}
+		@include break(s-small){
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	&__item-btn {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 20;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+	&__name{
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: left;
+	}
+	&__company-name{
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 140%;
+		text-align: left;
+	}
+}

@@ -1,0 +1,41 @@
+// Base colors
+$black: #000000;
+$white: #ffffff;
+$red : #FF0000;
+$gray: #383A3E;
+$gray-light: #959FBD;
+$purple: #310985;
+$purple-light: #8658F2;
+$orange: #FF5C01;
+$orange-light: #FFB102;
+$base-bg: #F8F8F8;
+
+//Extend colors
+$btn-txt-disabled: #9E9E9E;
+$btn-bg-disabled: #F6F6F6;
+$btn-bg-gray: #BDC3D3;
+$btn-border: #D7D7D7;
+$hr-border: #F1F1F1;
+$img-border: #687CBB;
+
+$avatar-bg: #F2F2F2;
+$avatar-text: #b1b1b1;
+$avatar-border: #E1E1E1;
+
+$tag-gray: #DCDCDC;
+
+//Geometry
+
+
+// Typography
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$line-height-base: 22.4px;
+
+//Speed animation
+$speed-high: .3s;
+$speed-middle: .5s;
+$speed-low: 1s;
+
+// Body
+$body-bg: $white;

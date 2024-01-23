@@ -1,0 +1,189 @@
+html {
+	position: relative;
+	min-height: 100%;
+
+	&.popup-opened {
+		overflow: hidden;
+
+		@include break(small) {
+			height: 100vh;
+		}
+	}
+}
+
+
+/* ********************** MODAL WINDOW ********************************/
+
+.my_overlay {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(44, 47, 57, 0.88);
+	cursor: pointer;
+	display: block;
+
+
+	@include break(small) {
+		background-color: rgba(44, 47, 57, 0.92);
+	}
+}
+
+.popup {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 5000;
+	//display: block;
+	display: none;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	&.opened {
+		display: block;
+	}
+
+	&__header{
+		color: $purple;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	&__element-wrap{
+		width: 100%;
+		max-width: 370px;
+		margin: auto;
+		.form-control{
+			max-width: 100%;
+		}
+	}
+	&__search{
+		padding: 25px 15px 14px 15px;
+	}
+	&__body {
+
+	}
+
+	&__footer{
+		padding: 30px 0;
+		.btn{
+			padding: 0 25px;
+		}
+	}
+
+	.popup-wrapper-inner {
+		width: 760px;
+		padding: 25px 0;
+		margin: 80px auto 50px;
+		position: relative;
+		z-index: 2;
+		background: $white;
+		border-radius: 10px;
+	}
+
+	&#get-more-details-popup .popup-wrapper-inner {
+		width: 900px;
+		max-width: 90%;
+		padding: 0 20px 0 20px;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAwIiBoZWlnaHQ9IjU4NyIgdmlld0JveD0iMCAwIDkwMCA1ODciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggb3BhY2l0eT0iMC42MzMxNjEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOTAwIDBMNTIxLjY0OCAzNzguMzQzVjQ0NC45NjFINzU2LjcwNFY1ODYuOTk3SDE0My4yOTZWNDQ0Ljk2MUgzNzguMzUyVjM3OC4zNDNMMCAwSDIwMi4zNzRMNDUwIDI0OC44NzdMNjk3LjYyNiAwSDkwMFoiIGZpbGw9IiNGQUZBRkEiLz48L3N2Zz4=);
+		background-repeat: no-repeat;
+		background-position: center 0;
+
+	}
+
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="number"],
+	input[type="password"],
+	input[type="file"],
+	input[type="date"],
+	select,
+	textarea {
+
+		&.wpcf7-not-valid {
+			border-color: #f00;
+
+		}
+	}
+
+	.wpcf7-not-valid-tip {
+		display: none !important;
+	}
+
+	@include break(small) {
+		.popup-wrapper-inner {
+			margin-top: 40px;
+			width: 90% !important;
+			padding: 45px 20px;
+
+			input[type="text"],
+			input[type="tel"],
+			input[type="email"],
+			input[type="number"],
+			input[type="password"],
+			input[type="file"],
+			input[type="date"],
+			select,
+			textarea {
+				width: 100%;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.in {
+		padding: 0;
+		text-align: center;
+	}
+
+	/* end of .in*/
+	@include break(x-small) {
+
+	}
+	button.popup-close {
+		background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTEuMzk1NyAxLjgxMjg2QzExLjcyOTUgMS40NzkxMiAxMS43Mjk1IDAuOTM4MDIzIDExLjM5NTcgMC42MDQyODZDMTEuMDYyIDAuMjcwNTQ4IDEwLjUyMDkgMC4yNzA1NDggMTAuMTg3MSAwLjYwNDI4Nkw2IDQuNzkxNDNMMS44MTI4NiAwLjYwNDI4NUMxLjQ3OTEyIDAuMjcwNTQ3IDAuOTM4MDIzIDAuMjcwNTQ4IDAuNjA0Mjg2IDAuNjA0Mjg2QzAuMjcwNTQ4IDAuOTM4MDIzIDAuMjcwNTQ4IDEuNDc5MTIgMC42MDQyODYgMS44MTI4Nkw0Ljc5MTQzIDZMMC42MDQyODUgMTAuMTg3MUMwLjI3MDU0NyAxMC41MjA5IDAuMjcwNTQ4IDExLjA2MiAwLjYwNDI4NiAxMS4zOTU3QzAuOTM4MDI0IDExLjcyOTUgMS40NzkxMiAxMS43Mjk1IDEuODEyODYgMTEuMzk1N0w2IDcuMjA4NTdMMTAuMTg3MSAxMS4zOTU3QzEwLjUyMDkgMTEuNzI5NSAxMS4wNjIgMTEuNzI5NSAxMS4zOTU3IDExLjM5NTdDMTEuNzI5NSAxMS4wNjIgMTEuNzI5NSAxMC41MjA5IDExLjM5NTcgMTAuMTg3MUw3LjIwODU3IDZMMTEuMzk1NyAxLjgxMjg2WiIgZmlsbD0iIzMxMDk4NSIvPjwvc3ZnPg==) center center no-repeat;
+		text-indent: -9999px;
+		background-size: 12px auto;
+		border: none;
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		padding: 0;
+		z-index: 10;
+		opacity: 0.9;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+form.invalid {
+	.wpcf7-response-output {
+		display: none !important;
+	}
+}
+form.sent {
+	.wpcf7-response-output {
+		border: none !important;
+		font-size: 24px;
+	}
+}
+
+
+#age-popup {
+	.popup-close {
+		display: none;
+	}
+}
+

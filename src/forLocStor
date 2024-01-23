@@ -1,0 +1,19 @@
+loggin
+sign up
+welcome
+What’s your name?
+What’s your community’s name?
+Which CRM do you use?
+Set API Key
+
+
+{
+	user_name: 'sdsd',
+	user_email: 'sdsd',
+	community_name: 'sdsd',
+	community_type: 'sdsd',
+	used_crm: {
+		crm_name: 'used_crm_api_key',
+	},
+
+}
